@@ -65,8 +65,8 @@ abstract class Page
         <div class="row">
             <div class="col-sm-12">
                 <form method="POST">
-                    <button type="submit" name="'.self::ACTION.'" value="'.self::CREATE_VIEW.'" class="btn btn-primary">Create new</button>
-                    <button type="submit" name="'.self::ACTION.'" value="" class="btn btn-primary">All</button>
+                    <button type="submit" name="'.self::ACTION.'" value="'.self::CREATE_VIEW.'" class="btn btn-primary">Create new '.$this->getTitle().'</button>
+                    <button type="submit" name="'.self::ACTION.'" value="" class="btn btn-primary">All '.$this->getTitle().'</button>
                 </form>
             </div>
         </div>
