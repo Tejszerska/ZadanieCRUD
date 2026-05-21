@@ -59,14 +59,18 @@ abstract class Page
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <h1>Internal Events - All</h1>
+                <h1>'
+                . $this->getTitle() .
+                '</h1>
             </div>
         </div>
         <div class="row">
             <div class="col-sm-12">
                 <form method="POST">
-                    <button type="submit" name="'.self::ACTION.'" value="'.self::CREATE_VIEW.'" class="btn btn-primary">Create new '.$this->getTitle().'</button>
-                    <button type="submit" name="'.self::ACTION.'" value="" class="btn btn-primary">All '.$this->getTitle().'</button>
+                    <a href="index.php?page=events" class="btn btn-warning">Internal Event)</a>
+                    <a href="index.php?page=tasks" class="btn btn-warning">Tasks</a>
+                    <button type="submit" name="'.self::ACTION.'" value="'.self::CREATE_VIEW.'" class="btn btn-primary"><strong>Create new </strong> '.$this->getTitle().'</button>
+                    <button type="submit" name="'.self::ACTION.'" value="" class="btn btn-primary">All '.$this->getTitle().'S</button>
                 </form>
             </div>
         </div>

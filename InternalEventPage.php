@@ -9,7 +9,7 @@ class InternalEventPage extends Page
 
     protected function passTitle(): string
     {
-        return "Internal events";
+        return "INTERNAL EVENT";
     }
 
     protected function passTableName(): string

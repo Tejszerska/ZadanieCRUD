@@ -15,7 +15,7 @@ public function __construct(
         string $description,
         string $deadline,
         int $internalEventId,
-         string $creationDateTime,
+        string $creationDateTime,
         string $editDateTime,
         string $notes,
         bool $isActive

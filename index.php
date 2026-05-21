@@ -1,7 +1,13 @@
 <?php
-
 require_once("InternalEventPage.php");
+require_once("TaskPage.php");
 
-$mypage = new InternalEventPage();
+$pageType = $_GET['page'] ?? 'events';
+
+if ($pageType === 'tasks') {
+    $mypage = new TaskPage();
+} else {
+    $mypage = new InternalEventPage();
+}
 
 $mypage->initialize();
