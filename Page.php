@@ -107,7 +107,8 @@ abstract class Page
             case self::ADD_NEW:
                 $this->enterModelDataFromForm();
                 $this->addNew();
-                header("Location: ".$_SERVER['PHP_SELF']);
+                $currentPage = $_GET['page'] ?? 'events';
+                header("Location: index.php?page=" . $currentPage);
                 break;
             case self::EDIT_VIEW:
                 echo $this->generateViewEdit();
@@ -115,11 +116,13 @@ abstract class Page
             case self::EDIT:
                 $this->enterModelDataFromForm();
                 $this->edit();
-                echo $this->generateViewAll();
+                $currentPage = $_GET['page'] ?? 'events';
+                header("Location: index.php?page=" . $currentPage);
                 break;
             case self::DELETE:
                 $this->delete();
-                echo $this->generateViewAll();
+                $currentPage = $_GET['page'] ?? 'events';
+                header("Location: index.php?page=" . $currentPage);
                 break;
         }
         echo $this->generateFooter();
